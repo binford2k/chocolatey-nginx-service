@@ -13,6 +13,9 @@
     <licenseUrl>http://nginx.org/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://nginx.org/nginx.gif</iconUrl>
-    <dependency id="nssm" version="2.24.0" />
+    <dependencies>
+      <dependency id="nssm" version="2.24.0" />
+      <dependency id="nginx" version="1.6.2" />
+    </dependencies>
   </metadata>
 </package>
