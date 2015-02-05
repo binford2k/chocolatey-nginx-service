@@ -1,7 +1,7 @@
-$wrapperExe  = 'C:\ProgramData\chocolatey\bin\nssm.exe'
+﻿$wrapperExe  = 'C:\ProgramData\chocolatey\bin\nssm.exe'
 $serviceExe  = 'C:\ProgramData\chocolatey\bin\nginx.exe'
 $configFile  = 'C:\ProgramData\nginx\conf\nginx.conf'
-$installRoot = 'C:\ProgramData\nginx\'
+$installRoot = 'C:\ProgramData\nginx'
 
 $scriptDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $confDir     = (Join-Path $scriptDir -ChildPath "..\confdir") | Resolve-Path
