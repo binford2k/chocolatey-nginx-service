@@ -7,15 +7,44 @@
     <authors>Igor Sysoev</authors>
     <owners>Ben Ford</owners>
     <summary>Windows service for the nginx web server</summary>
-    <description>nginx [engine x] is an HTTP and reverse proxy server, as well as a mail proxy server. This provides a nssm Windows service wrapper for it.</description>
+    <description>nginx [engine x] is an HTTP and reverse proxy server, as well as a mail proxy server.
+    This package provides an `nssm` Windows service wrapper for it which creates a standard Windows
+    service named `nginx` to manage the server. You can use standard tools like the MMC snap-in to
+    start the service or change its run mode.
+
+    This package also creates a fairly nice configuration directory structure making it easier to manage nginx.
+
+```
+C:/ProgramData/nginx/
+├── conf
+│   ├── fastcgi.conf
+│   ├── fastcgi_params
+│   ├── koi-utf
+│   ├── koi-win
+│   ├── mime.types
+│   ├── nginx.conf
+│   ├── scgi_params
+│   ├── uwsgi_params
+│   └── win-utf
+├── errors
+│   └── 50x.html
+├── html
+│   └── index.html
+├── logs
+│   ├── default.access.log
+│   └── error.log
+└── temp
+```
+
+    See the [nssm documentation](http://nssm.cc) if you'd like to add support for your own service.</description>
     <projectUrl>http://nginx.org</projectUrl>
-    <tags>webserver</tags>
+    <tags>webserver nginx service</tags>
     <licenseUrl>http://nginx.org/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://nginx.org/nginx.gif</iconUrl>
     <dependencies>
       <dependency id="nssm" version="2.24.0" />
-      <dependency id="nginx" version="1.6.2" />
+      <dependency id="nginx" version="[1.6.2]" />
     </dependencies>
   </metadata>
 </package>
