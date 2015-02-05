@@ -2,7 +2,7 @@
 
 try {
   Invoke-Expression "$wrapperExe stop nginx"
-  Invoke-Expression "$wrapperExe remove nginx"
+  Invoke-Expression "$wrapperExe remove nginx confirm"
 
   Write-ChocolateySuccess "nginx-service"
 } catch {
