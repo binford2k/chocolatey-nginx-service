@@ -1,7 +1,7 @@
 ﻿$wrapperExe  = 'C:\ProgramData\chocolatey\bin\nssm.exe'
 
 try {
-  Invoke-Expression "$wrapperExe stop nginx"
+  Invoke-Expression "$wrapperExe stop nginx" -ErrorAction SilentlyContinue
   Invoke-Expression "$wrapperExe remove nginx confirm"
 
   Write-ChocolateySuccess "nginx-service"
@@ -9,3 +9,4 @@ try {
   Write-ChocolateyFailure "nginx-service" "$($_.Exception.Message)"
   throw
 }
+
