@@ -1,4 +1,4 @@
-﻿$wrapperExe  = 'C:\ProgramData\chocolatey\bin\nssm.exe'
+﻿$wrapperExe  = "$env:ChocolateyInstall\bin\nssm.exe"
 
 try {
   Invoke-Expression "$wrapperExe stop nginx" -ErrorAction SilentlyContinue

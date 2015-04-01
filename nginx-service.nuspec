@@ -3,7 +3,7 @@
   <metadata>
     <id>nginx-service</id>
     <title>nginx-service</title>
-    <version>1.6.2</version>
+    <version>1.6.2.1</version>
     <authors>Igor Sysoev</authors>
     <owners>Ben Ford</owners>
     <summary>Windows service for the nginx web server</summary>

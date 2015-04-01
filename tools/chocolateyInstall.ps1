@@ -1,5 +1,5 @@
-﻿$wrapperExe  = 'C:\ProgramData\chocolatey\bin\nssm.exe'
-$serviceExe  = 'C:\ProgramData\chocolatey\bin\nginx.exe'
+﻿$wrapperExe  = "$env:ChocolateyInstall\bin\nssm.exe"
+$serviceExe  = "$env:ChocolateyInstall\bin\nginx.exe"
 $configFile  = 'C:\ProgramData\nginx\conf\nginx.conf'
 $installRoot = 'C:\ProgramData\nginx'
 
